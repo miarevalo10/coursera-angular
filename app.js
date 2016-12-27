@@ -39,6 +39,7 @@ function LunchCtrl($scope){
       arrayOfStrs.splice(index, 1);
       index = arrayOfStrs.indexOf("");
     }
+    $scope.inputTxt = arrayOfStrs.join(',');
 
     console.log(string);
     console.log(arrayOfStrs);
