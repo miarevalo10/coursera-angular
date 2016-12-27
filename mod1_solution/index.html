@@ -1,12 +1,34 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en" ng-app="LunchApp">
   <head>
-    <meta charset="utf-8">
+    <title>Lunch Checker</title>
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
-    <title>Holii</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
   </head>
-  <body>
-    <h1>what suppp11</h1>
-  </body>
+<body>
+   <div class="container" ng-controller="LunchCtrl">
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group">
+             <input id="lunch-menu" type="text"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control"
+             ng-model="inputTxt">
+             An empty item i.e. , , is not considered towards the count
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default" ng-click="checkTooMuch()">Check If Too Much</button>
+
+         </div>
+         <div class="form-group message">
+          <font color={{color}}>{{msg}}</font>
+         </div>
+   </div>
+
+</body>
 </html>
